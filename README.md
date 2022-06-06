@@ -87,3 +87,36 @@ Una maquina virtual utiliza hardware virtual. Todas las maquinas virtuales tiene
 ### Los adaptadores de red de las máquinas virtuales
 VM Network -> Red por defecto
 Poner el adaptador VMXNET 3 proporciona un 20% de mejora sobre E1000e.
+
+### Beneficios de las VMware Tools
+* Instala los drivers de dispositivos
+    * SVGA display
+    * VMXNET/VMXNET3
+    * Balloon driver para gestión de memoria
+    * Driver de sincronización de I/O de disco
+* Aumentar el rendimiento gráfico
+* Aumentar el rendimiento del ratón
+
+Si no instalamos las VMware Tools perdemos rendimiento y eficiencia. 
+
+* Funcionalidades
+    * Servicio Heartbeat en el sistema operativo invitado
+    * Sincronización de la hora
+    * Autentificación del sistema operativo invitado (VMware vCenter Single Sing-on)
+    * Posibilidad de apagar máquina virtual sin entrar en su consola
+
+## Gestión centralizada con vCenter Server
+
+### Arquitectura de vCenter Server
+Es un servicio que actua como un unico punto de administracion central, se ejecuta en un servidor fisico. Ultima version 6.7 en Windows. vCenter te permite agrupar y administrar recursos de multiples hosts. vCenter Server Appliance es una maquina virtual preconfigurada basada en Linux. 
+
+vCenter es una maquina optimizada que ejecuta vCenter y los servicios asociados, ofrece una alternativa de bajo coste "Appliance" 
+
+### PSC
+Puedes instalar PSC y vCenter Server en la misma o en diferente máquina. El vCenter incluye PSC.
+
+El PSC embebido es ideal para entornos pequeños
+
+El PSC embebido no puede unirse a otras instancias de vCenter Server o Platform Services Controller.
+
+
